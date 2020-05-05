@@ -5,7 +5,7 @@ const forecastMsg = document.getElementById('forecast')
 const errorMsg = document.getElementById('error')
 
 form.addEventListener('submit', (event) => {
-    const devUrl = `http://localhost:3000/weather?address=${userInput.value}`
+    const devUrl = `/weather?address=${userInput.value}`
 
     event.preventDefault()
     locationMsg.textContent = 'Loading. . .'
