@@ -1,8 +1,12 @@
 const form = document.querySelector('form')
 const userInput  = document.querySelector('input')
+const weatherImage = document.getElementById('weather-img')
 const locationMsg = document.getElementById('location')
 const forecastMsg = document.getElementById('forecast')
 const errorMsg = document.getElementById('error')
+const imageContainer = document.querySelector('.image-container')
+
+
 
 form.addEventListener('submit', (event) => {
     const devUrl = `/weather?address=${userInput.value}`
@@ -15,14 +19,18 @@ form.addEventListener('submit', (event) => {
     .then(( response ) => {
         response.json()
         .then(( data ) => {
+            const { forecastImg, country, describtion, temp, tempFeelsLike, windSpeed, lastObserved } = data.forecast || {}
+
             if(data.error) {
                 locationMsg.textContent = ''
                 forecastMsg.textContent = ''
                 return errorMsg.textContent = data.error
             }
+
             errorMsg.textContent = ''
+            weatherImage.src = forecastImg
             locationMsg.textContent  = data.location
-            forecastMsg.textContent = data.forecast
+            forecastMsg.textContent = `It's ${describtion} with a temperature of ${temp} degrees and a windspeed of ${windSpeed} km/h. It feels like ${tempFeelsLike} degrees in ${country}. Last observation happend at ${lastObserved}.`
         })
     })
     .catch(( error ) => {

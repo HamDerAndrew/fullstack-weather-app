@@ -1,3 +1,68 @@
-h1 {
-    color: green;
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,1e5cbf+11,2989d8+53,7db9e8+100 */
+    background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #1e5799 0%, #1e5cbf 11%, #2989d8 53%, #7db9e8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #1e5799 0%,#1e5cbf 11%,#2989d8 53%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #1e5799 0%,#1e5cbf 11%,#2989d8 53%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+h1, h2, h3, h4, h5 {
+    color: whitesmoke;
+}
+
+header a {
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    text-align: center;
+    flex: 1;
+    width: 40%;
+    margin: 0 auto;
+    color: whitesmoke;
+}
+
+.weather-search {
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.search-btn {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: paleturquoise;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+    background-color: #9ed3d3;
+    transition: .2s linear;
+}
+
+.search-btn:focus {
+    outline: none;
+    background-color: #9ed3d3;;
+}
+
+.image-container {
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #81ff9f;
+    color: #262424;
+    padding: 2rem;
+    text-align: center;
 }

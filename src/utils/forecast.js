@@ -18,12 +18,16 @@ const forecast = (latitude, longitude, callback) => {
                 errorInfo: error.info
             }, undefined)
         } else {
-            // callback(undefined, {
-            //     latitude: response.data.location.lat,
-            //     longitude: response.data.location.lon
-            // })
-            //Alternative:
-            callback(undefined, `${data.current.weather_descriptions[0]}. It is currently ${data.current.temperature} degrees out. It feels like ${data.current.feelslike} degrees in ${data.location.country}.`)
+            callback(undefined, 
+            {
+                forecastImg: data.current.weather_icons[0],
+                country: data.location.country,
+                describtion: data.current.weather_descriptions[0],
+                temp: data.current.temperature,
+                tempFeelsLike: data.current.feelslike,
+                windSpeed: data.current.wind_speed,
+                lastObserved: data.current.observation_time
+            })
         }
     })
     .catch(( error ) => {

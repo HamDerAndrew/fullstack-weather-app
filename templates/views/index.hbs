@@ -8,15 +8,20 @@
     <title>Weather App</title>
 </head>
 <body>
-    {{>header }}
-    <p>Let's check the weather, shall we?</p>
-    <form>
-        <input type="text" placeholder="location">
-        <button>Search</button>
-    </form>
-    <p id="location"></p>
-    <p id="forecast"></p>
-    <p id="error"></p>
+    <div class="wrapper">
+        {{>header }}
+        <p>Let's check the weather, shall we?</p>
+        <form>
+            <input class="weather-search" type="text" placeholder="location">
+            <button class="search-btn">Search</button>
+        </form>
+        <div class="image-container">
+            <img id="weather-img" src="/img/weatherplaceholder.png" />
+        </div>
+        <p id="location"></p>
+        <p id="forecast"></p>
+        <p id="error"></p>
+    </div>
 
     {{>footer }}
 
