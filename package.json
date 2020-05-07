@@ -4,14 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js - js,hbs"
   },
   "keywords": [],
-  "author": "",
+  "author": "André Larsen",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1",
     "hbs": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
   }
 }
