@@ -60,6 +60,15 @@ a {
     margin-top: 10px;
 }
 
+.help-container {
+    display: flex;
+    justify-content: center;
+}
+
+.help-list {
+    text-align: left;
+}
+
 footer {
     background-color: #81ff9f;
     color: #262424;

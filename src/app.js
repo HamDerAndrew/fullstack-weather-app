@@ -49,8 +49,8 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'Help and FAQ',
-        helpMsg: 'Here you can get help by browsing the FAQ or contact us if necessary',
+        title: 'Help',
+        helpMsg: 'If the service is not working as intended please see the suggestions below as to why it might not:',
         name: 'André Larsen'
     })
 })
@@ -125,7 +125,7 @@ app.listen(port, () => {
 })
 
 /*
-// Configure what the server should do when a specific URL is served (servere HTML, serve JSON etc.)
+// Configure what the server should do when a specific URL is served (serve HTML, serve JSON etc.)
 // Takes two arguments: a string URL and a function. The function describes what to do when a URL is served/visited.
 // The function takes two arguments: request and response.
 app.get('', (req, res) => {
