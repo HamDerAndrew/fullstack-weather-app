@@ -1,9 +1,8 @@
 const axios = require('axios');
-const forecastKey = require('./auth.js')
 
 // Note: A callback function is not required to be named 'callback' :)
 const forecast = (latitude, longitude, callback) => {
-    const apiKey = forecastKey.returnForecast()
+    const apiKey = process.env.WEATHERSTACK_API_KEY
     const baseURL = 'http://api.weatherstack.com/'
     const url = `${baseURL}/current?access_key=${apiKey}&query=${latitude},${longitude}`
     
