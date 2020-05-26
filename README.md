@@ -19,4 +19,4 @@ Add the API keys as the following environment variables and the project will run
 
 `WEATHERSTACK_API_KEY='506dffb1bfa5251d1550b0dd5f7763fb'`
 
-`MAPBOX_API_KEY = 'pk.eyJ1IjoiYWxhcnNlbiIsImEiOiJjazlsOWI4NWswMmZoM21tdGZvaWk5a3FvIn0.aBWh-pC7cINpuAhHp3_lYw'`
+`MAPBOX_API_KEY='pk.eyJ1IjoiYWxhcnNlbiIsImEiOiJjazlsOWI4NWswMmZoM21tdGZvaWk5a3FvIn0.aBWh-pC7cINpuAhHp3_lYw'`
