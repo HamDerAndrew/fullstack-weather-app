@@ -5,13 +5,14 @@ const locationMsg = document.getElementById('location')
 const forecastMsg = document.getElementById('forecast')
 const errorMsg = document.getElementById('error')
 const imageContainer = document.querySelector('.image-container')
-
-
+const loadingIndicator = document.querySelector('.lds-dual-ring');
 
 form.addEventListener('submit', (event) => {
     const devUrl = `/weather?address=${userInput.value}`
 
     event.preventDefault()
+    loadingIndicator.classList.add('indicator-active');
+    console.log(loadingIndicator)
     locationMsg.textContent = 'Loading. . .'
     errorMsg.textContent = ''
 
@@ -20,6 +21,7 @@ form.addEventListener('submit', (event) => {
         response.json()
         .then(( data ) => {
             const { forecastImg, country, describtion, temp, tempFeelsLike, windSpeed, lastObserved } = data.forecast || {}
+            loadingIndicator.classList.remove('indicator-active')
 
             if(data.error) {
                 locationMsg.textContent = ''
