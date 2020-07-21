@@ -12,7 +12,6 @@ form.addEventListener('submit', (event) => {
 
     event.preventDefault()
     loadingIndicator.classList.add('indicator-active');
-    console.log(loadingIndicator)
     locationMsg.textContent = 'Loading. . .'
     errorMsg.textContent = ''
 
